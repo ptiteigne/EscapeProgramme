@@ -98,31 +98,34 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer" index="0"]
+[node name="TypeContainer" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 824.0
-margin_bottom = 14.0
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_constants/separation = 10
 alignment = 1
+_sections_unfolded = [ "custom_constants" ]
 
-[node name="LabelTYPE" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer" index="0"]
+[node name="TypeLabel" type="Label" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 282.0
-margin_right = 311.0
-margin_bottom = 14.0
+margin_left = 222.0
+margin_top = 5.0
+margin_right = 251.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -135,15 +138,39 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin" ]
 
-[node name="LabelTYPE2" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer" index="1"]
+[node name="BatracienCheck" type="CheckBox" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 315.0
-margin_right = 375.0
-margin_bottom = 14.0
+margin_left = 261.0
+margin_right = 285.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+
+[node name="BatracienLabel" type="Label" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 295.0
+margin_top = 5.0
+margin_right = 355.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -155,15 +182,39 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="LabelTYPE3" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer" index="2"]
+[node name="MammiCheck" type="CheckBox" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 379.0
-margin_right = 488.0
-margin_bottom = 14.0
+margin_left = 365.0
+margin_right = 389.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+
+[node name="MammiLabel" type="Label" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 399.0
+margin_top = 5.0
+margin_right = 508.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -175,15 +226,39 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="LabelTYPE4" type="Label" parent="Panel/Panel2/VBoxContainer/HBoxContainer" index="3"]
+[node name="HumainCheck" type="CheckBox" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 492.0
+margin_left = 518.0
 margin_right = 542.0
-margin_bottom = 14.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+
+[node name="HumainLabel" type="Label" parent="Panel/Panel2/VBoxContainer/TypeContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 552.0
+margin_top = 5.0
+margin_right = 602.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -191,6 +266,145 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "Humain"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="IdentiteContainer" type="GridContainer" parent="Panel/Panel2/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 28.0
+margin_right = 824.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 3
+_sections_unfolded = [ "Anchor", "Margin", "custom_constants" ]
+
+[node name="NomLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 62.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Nom : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SexeLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 66.0
+margin_right = 108.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Sexe : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="IrisLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 112.0
+margin_right = 158.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Iris : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="PrenomLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 62.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Prénom : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AgeLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 66.0
+margin_top = 18.0
+margin_right = 108.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Âge : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TailleLabel" type="Label" parent="Panel/Panel2/VBoxContainer/IdentiteContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 112.0
+margin_top = 18.0
+margin_right = 158.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Taille : "
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
