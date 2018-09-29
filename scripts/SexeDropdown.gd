@@ -8,8 +8,8 @@ func _ready():
     # Called when the node is added to the scene for the first time.
     # Initialization here
     self.add_separator()
-    self.add_item("Femme")
     self.add_item("Homme")
+    self.add_item("Femme")
 
 #func _process(delta):
 #    # Called every frame. Delta is time since last frame.

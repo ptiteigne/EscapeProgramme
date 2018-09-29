@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TypeBar.gd" type="Script" id=1]
 
 [node name="TypeContainer" type="HBoxContainer"]
 
@@ -16,6 +18,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 10
 alignment = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
@@ -240,5 +243,11 @@ text = "Humain"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[connection signal="toggled" from="BatracienCheck" to="." method="_on_BatracienCheck_toggled"]
+
+[connection signal="toggled" from="MammiCheck" to="." method="_on_MammiCheck_toggled"]
+
+[connection signal="toggled" from="HumainCheck" to="." method="_on_HumainCheck_toggled"]
 
 
