@@ -1,23 +1,19 @@
-extends Node
+extends OptionButton
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
 
-# onready var irisDropdown = $Panel/Panel2/VBoxContainer/IdentiteContainer/Grid/IrisContainer/Dropdown
-
 func _ready():
     # Called when the node is added to the scene for the first time.
     # Initialization here
-    pass
+    self.add_separator()
+    self.add_item("Bleu")
+    self.add_item("Hétérochromie")
+    self.add_item("Marron")
+    self.add_item("Vert")
 
-func _process(delta):
+#func _process(delta):
 #    # Called every frame. Delta is time since last frame.
 #    # Update game logic here.
-    pass
-
-func _on_irisSelected(ID):
-    print("Iris : ", ID)
-
-func _on_sexeSelected(ID):
-    print("Sexe : ", ID)
+#    pass
