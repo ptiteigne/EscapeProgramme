@@ -39,5 +39,8 @@ func _on_HumainCheck_toggled(button_pressed):
     
     if(button_pressed == true):
         emit_signal("good_type_selected")
-    else:
-        emit_signal("wrong_type_selected")
+        $HumainCheck.disabled = true
+        $BatracienCheck.disabled = true
+        $MammiCheck.disabled = true
+    #else:
+    #   emit_signal("wrong_type_selected")

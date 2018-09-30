@@ -41,3 +41,10 @@ func _on_wrong_type_selected():
 
 func _on_IdentiteValidee():
     $Panel/Panel3/InfosSujet/StatusImplantation.visible = true
+    $Panel/Panel2/VBoxContainer/DonneesContainer.visible = true
+
+
+### Popup the code (when the "empreinte" is valid)
+
+func _on_DonneesContainer_generate_code():
+    $CodePopup.popup_centered()

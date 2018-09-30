@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/TestRe.gd" type="Script" id=1]
 [ext_resource path="res://fonts/HackTITLE.tres" type="DynamicFont" id=2]
 [ext_resource path="res://TypeBar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://IdentiteContainer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://fonts/HackFont.tres" type="DynamicFont" id=5]
-[ext_resource path="res://images/Sujet.jpg" type="Texture" id=6]
+[ext_resource path="res://DonneesContainer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/HackFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://images/Sujet.jpg" type="Texture" id=7]
+[ext_resource path="res://DesamorcagePopup.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Theme" id=1]
 
@@ -130,6 +132,7 @@ size_flags_vertical = 1
 
 [node name="IdentiteContainer" parent="Panel/Panel2/VBoxContainer" index="2" instance=ExtResource( 4 )]
 
+visible = false
 margin_top = 28.0
 margin_right = 770.0
 margin_bottom = 172.0
@@ -140,9 +143,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 172.0
+margin_top = 28.0
 margin_right = 770.0
-margin_bottom = 176.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -150,285 +153,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="DonneesContainer" type="VBoxContainer" parent="Panel/Panel2/VBoxContainer" index="4"]
+[node name="DonneesContainer" parent="Panel/Panel2/VBoxContainer" index="4" instance=ExtResource( 5 )]
 
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 176.0
-margin_right = 770.0
-margin_bottom = 304.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/Panel2/VBoxContainer/DonneesContainer" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 770.0
-margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/margin_top = 10
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="DonneesLabel" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 10.0
-margin_right = 770.0
-margin_bottom = 24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "DONNEES SUJET"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/Panel2/VBoxContainer/DonneesContainer" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 48.0
-margin_right = 770.0
-margin_bottom = 128.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="GridContainer" type="GridContainer" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 20.0
-margin_right = 770.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-columns = 2
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="GroupeSanguin" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 373.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "Groupe sanguin : A+"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="AntecedentsLabel" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 377.0
-margin_right = 750.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "ANTECEDENTS MEDICAUX :"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="Container" type="HBoxContainer" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 373.0
-margin_bottom = 42.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-alignment = 0
-
-[node name="Empreinte" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer/Container" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 5.0
-margin_right = 143.0
-margin_bottom = 19.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Empreinte digitale : n°"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="LineEdit" type="LineEdit" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer/Container" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 147.0
-margin_right = 205.0
-margin_bottom = 24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 4
-size_flags_vertical = 1
-align = 1
-max_length = 1
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
-_sections_unfolded = [ "Caret", "Margin", "Placeholder", "Rect", "Size Flags" ]
-
-[node name="FractureLabel" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 377.0
-margin_top = 23.0
-margin_right = 750.0
-margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = " - fracture du genou en 2016"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="VideLabel" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 46.0
-margin_right = 373.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="OesophageLabel" type="Label" parent="Panel/Panel2/VBoxContainer/DonneesContainer/MarginContainer2/GridContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 377.0
-margin_top = 46.0
-margin_right = 750.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = " - délicatesse à l'oesophage"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="HSeparator3" type="HSeparator" parent="Panel/Panel2/VBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 304.0
-margin_right = 770.0
-margin_bottom = 308.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+visible = false
+margin_top = 32.0
+margin_bottom = 292.0
 
 [node name="Panel3" type="Panel" parent="Panel" index="2"]
 
@@ -469,6 +198,8 @@ _sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
 
 [node name="StatusImplantation" type="VBoxContainer" parent="Panel/Panel3/InfosSujet" index="0"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -631,7 +362,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 6 )
 text = "SUCCES"
 percent_visible = 1.0
 lines_skipped = 0
@@ -644,17 +375,20 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 68.0
 margin_right = 254.0
-margin_bottom = 406.0
+margin_bottom = 338.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 stretch_mode = 0
+
+[node name="CodePopup" parent="." index="1" instance=ExtResource( 8 )]
+
+visible = false
 
 [connection signal="good_type_selected" from="Panel/Panel2/VBoxContainer/TypeContainer" to="." method="_on_good_type_selected"]
 
@@ -665,5 +399,7 @@ stretch_mode = 0
 [connection signal="irisSelected" from="Panel/Panel2/VBoxContainer/IdentiteContainer" to="." method="_on_irisSelected"]
 
 [connection signal="sexeSelected" from="Panel/Panel2/VBoxContainer/IdentiteContainer" to="." method="_on_sexeSelected"]
+
+[connection signal="generate_code" from="Panel/Panel2/VBoxContainer/DonneesContainer" to="." method="_on_DonneesContainer_generate_code"]
 
 
