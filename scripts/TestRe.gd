@@ -30,6 +30,7 @@ func _on_sexeSelected(ID):
 #    Set "IdentiteContainer" to visible
 func _on_good_type_selected():
     $Panel/Panel2/VBoxContainer/IdentiteContainer.visible = true
+    $Panel/Panel3/InfosSujet/SujetFlou.visible = true
     print("visible")
 
 # Emitted when user selects the wrong type
@@ -40,7 +41,9 @@ func _on_wrong_type_selected():
     print("invisible")
 
 func _on_IdentiteValidee():
+    $Panel/Panel3/InfosSujet/SujetFlou.visible = false
     $Panel/Panel3/InfosSujet/StatusImplantation.visible = true
+    $Panel/Panel3/InfosSujet/Sujet.visible = true
     $Panel/Panel2/VBoxContainer/DonneesContainer.visible = true
 
 

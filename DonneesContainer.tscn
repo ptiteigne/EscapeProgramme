@@ -372,7 +372,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 168.0
 margin_right = 770.0
-margin_bottom = 260.0
+margin_bottom = 218.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -386,6 +386,7 @@ _sections_unfolded = [ "custom_constants" ]
 
 [node name="GenererButton" type="Button" parent="MarginContainer4" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -411,6 +412,8 @@ flat = false
 clip_text = true
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="text_changed" from="MarginContainer2/GridContainer/Empreinte/EmpreinteEdit" to="." method="_on_EmpreinteEdit_text_changed"]
 
 [connection signal="button_up" from="MarginContainer4/GenererButton" to="." method="_on_GenererButton_up"]
 

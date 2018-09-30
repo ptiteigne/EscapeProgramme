@@ -10,8 +10,11 @@ config_version=3
 
 [application]
 
-config/name="EscapeProgramme"
-config/icon="res://icon.png"
+config/name="GenCode"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://images/Warning!.png"
+boot_splash/fullsize=false
+config/icon="res://images/Warning!.png"
 
 [rendering]
 
